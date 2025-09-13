@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Organic Shop</title>
+  <link rel="stylesheet" href="./main.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+    }
+
+    header {
+      background-image: url(https://suret.pics/uploads/posts/2023-09/1695302285_2-42.jpg) ;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+     width: 100%;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .product {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      margin: 10px;
+      width: 280px;
+      padding: 20px;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .product:hover {
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .product img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .product h3 {
+      margin: 10px 0 5px;
+    }
+
+    .product p {
+      margin: 5px 0 10px;
+      color: green;
+      font-weight: bold;
+    }
+
+    .product button {
+      background: #4caf50;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    @media (max-width: 768px) {
+      .product {
+        width: 90%;
+      }
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #f0f0f0;
+      margin-top: 50px;
+    }
+
+    footer a {
+      color: #4caf50;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Organick Shop</h1>
+</header>
+
+<div class="container lg:grid-cols-4  md:grid-cols-4 ">
+
+  <div class="product" data-id="1" data-name="Broccoli" data-price="13.00">
+    <img src="Photo.svg" alt="Broccoli">
+    <h3>Broccoli</h3>
+    <p>$13.00</p>
+    <button onclick="addToCart(this)"> Add to Cart</button>
+  </div>
+
+  <div class="product" data-id="2" data-name="Banana" data-price="14.00">
+    <img src="Photo (1).svg" alt="Banana">
+    <h3>Banana</h3>
+    <p>$14.00</p>
+    <button onclick="addToCart(this)"> Add to Cart</button>
+  </div>
+
+  <div class="product" data-id="3" data-name="Tomato" data-price="17.00">
+    <img src="image 13.svg" alt="Tomato">
+    <h3>Tomato</h3>
+    <p>$17.00</p>
+    <button onclick="addToCart(this)"> Add to Cart</button>
+  </div>
+
+    <div class="product" data-id="4" data-name="White nuts" data-price="15.00">
+    <img src="Photo (2).svg" alt="White nuts">
+    <h3>White Nuts</h3>
+    <p>$15.00</p>
+    <button onclick="addToCart(this)"> Add to Cart</button>
+  </div>
+
+  <div class="product" data-id="5" data-name="Mung Bean" data-price="11.00">
+    <img src="Photo (3).svg" alt="Mung Bean">
+    <h3>Mung Bean</h3>
+    <p>$11.00</p>
+    <button onclick="addToCart(this)"> Add to Cart</button>
+  </div>
+
+   <div class="product" data-id="6" data-name="Brown Hazelnut" data-price="12.00">
+    <img src="Photo (4).svg" alt="Brown Hazelnut">
+    <h3>Brown Hazelnut</h3>
+    <p>$12.00</p>
+    <button onclick="addToCart(this)"> Add to Cart</button>
+  </div>
+
+<div class="product" data-id="7" data-name="Eggs" data-price="17.00">
+    <img src="Photo (5).svg" alt="Eggs">
+    <h3>Eggst</h3>
+    <p>$17.00</p>
+    <button onclick="addToCart(this)"> Add to Cart</button>
+  </div>
+
+<div class="product" data-id="8" data-name="Zelco Suji Elaichi Rusk" data-price="15.00">
+    <img src="Photo (6).svg" alt="Zelco Suji Elaichi Rusk">
+    <h3>Zelco Suji Elaichi Rusk</h3>
+    <p>$15.00</p>
+    <button onclick="addToCart(this)"> Add to Cart</button>
+  </div>
+
+<div class="product" data-id="9" data-name="Mung Bean" data-price="11.00">
+    <img src="Photo (7).svg" alt="ZMung Bean">
+    <h3>Mung Bean</h3>
+    <p>$11.00</p>
+    <button onclick="addToCart(this)"> Add to Cart</button>
+  </div>
+
+
+  <div class="product" data-id="10" data-name="White Hazelnut" data-price="12.00">
+    <img src="Photo (8).svg" alt="White Hazelnut">
+    <h3>White Hazelnut</h3>
+    <p>$12.00</p>
+    <button onclick="addToCart(this)"> Add to Cart</button>
+  </div>
+
+<div class="product" data-id="11" data-name="Fresh Corn" data-price="17.00">
+    <img src="Photo (9).svg" alt="Fresh Corn">
+    <h3>Fresh Corn</h3>
+    <p>$17.00</p>
+    <button onclick="addToCart(this)"> Add to Cart</button>
+  </div>
+
+<div class="product mx-w-[335px]" data-id="11" data-name="Organic Almonds" data-price="15.00">
+    <img src="Photo (10).svg" style="max-width: 335px;" alt="Organic Almonds">
+    <h3>Organic Almonds</h3>
+    <p>$15.00</p>
+    <button onclick="addToCart(this)"> Add to Cart</button>
+  </div>
+
+</div>
+</div>
+<footer style="text-align:center; margin-top:30px;">
+    <a href="cart.html"> Savatni korish</a>
+  </footer>
+
+  <script>
+    function addToCart(button) {
+      const product = button.closest('.product');
+      const id = product.dataset.id;
+      const name = product.dataset.name;
+      const price = product.dataset.price;
+
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+      const exists = cart.find(item => item.id === id);
+      if (!exists) {
+        cart.push({ id, name, price });
+        localStorage.setItem('cart', JSON.stringify(cart));
+        alert(`${name} savatchaga qoshildi!`);
+      } else {
+        alert(`${name} allaqachon savatchada!`);
+      }
+    }
+  </script>
+</body>
+</html>
